@@ -2395,6 +2395,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
 }
 
 #junctions {
+  text: none;
   [highway = 'motorway_junction'] {
     [zoom >= 11] {
       text-name: "[ref]";
@@ -2447,10 +2448,11 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
 }
 
 #bridge-text  {
+  text: none;
   [man_made = 'bridge'] {
     [zoom >= 12][way_pixels > 62.5] {
       text-name: "[name]";
-      text-size: 0;
+      text-size: 10;
       text-wrap-width: 30; // 3 em
       text-line-spacing: -1.2; // -0.15 em
       text-fill: black;
@@ -2468,21 +2470,21 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
         text-halo-radius: @standard-halo-radius * 1.1;
       }
       [way_pixels > 1000] {
-        text-size: 0;
+        text-size: 12;
         text-margin: 3.6; // 0.3 em
         text-wrap-width: 36; // 3 em
         text-line-spacing: -1.65; // -0.15 em
         text-halo-radius: @standard-halo-radius * 1.2;
       }
       [way_pixels > 4000] {
-        text-size: 0;
+        text-size: 13;
         text-margin: 3.9; // 0.3 em
         text-wrap-width: 39; // 3 em
         text-line-spacing: -1.80; // -0.15 em
         text-halo-radius: @standard-halo-radius * 1.3;
       }
       [way_pixels > 16000] {
-        text-size: 0;
+        text-size: 14;
         text-margin: 4.2; // 0.3 em
         text-wrap-width: 42; // 3 em
         text-line-spacing: -1.95; // -0.15 em
@@ -2696,6 +2698,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
 }
 
 #roads-text-ref {
+  text: none;
   [highway = 'motorway'],
   [highway = 'trunk'],
   [highway = 'primary'],
@@ -2821,6 +2824,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
 }
 
 #roads-text-name {
+  text: none;
   [highway = 'motorway'],
   [highway = 'trunk'],
   [highway = 'primary'],
@@ -3161,6 +3165,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
   }
 }
 #railways-text-name {
+  text: none;
   /* Mostly started from z17. */
   [railway = 'rail'],
   [railway = 'subway'],
