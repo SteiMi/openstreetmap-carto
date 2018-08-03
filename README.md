@@ -11,6 +11,12 @@ to be easily customised. They work with [Kosmtik](https://github.com/kosmtik/kos
 Since August 2013 these stylesheets have been used on the OSMF tileservers (tile.openstreetmap.org), and
 are updated from each point release. They supersede the previous [XML-based stylesheets](https://github.com/openstreetmap/mapnik-stylesheets).
 
+This fork was an attempt to remove all text from this style but I couldn't get it to work.
+However, I found a workaround:
+
+* Compile the project.mml as usual with carto
+* Delete all lines containing the string "<TextSymbolizer" from the resulting xml file (e.g. with vim: `:g/<TextSymbolizer/d`)
+
 # Installation
 
 You need a PostGIS database populated with OpenStreetMap data along with auxillary shapefiles. 
